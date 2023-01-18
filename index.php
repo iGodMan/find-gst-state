@@ -11,7 +11,7 @@
     <div class="container text-center">
         <div class="form mt-5 pt-5 col-6 m-auto">
             <input type="text" class="gst form-control">
-            <input type="button" value="Get" id="test" class="btn btn-primary mt-3 col-3">
+            <input type="button" value="Get" id="get-state" class="btn btn-primary mt-3 col-3">
         </div>
     
         <div class="result text-center mt-5">
@@ -23,8 +23,8 @@
 <script>
 	$(document).ready(function(){
 		
-		$(".gst").keyup(function(){
-			var str = $(this).val();
+		$("#get-state").click(function(){
+			var str = $('.gst').val();
 			
 			var s1 = str.charAt(0);
 			var s2 = str.charAt(1);
@@ -33,7 +33,7 @@
 
 			if(check_gst == '33')
 			{
-				$('.result').html('This GST Tamil Nadu');
+				$('.result').html('This GST State is : Tamil Nadu');
 			}
 			else
 			{
